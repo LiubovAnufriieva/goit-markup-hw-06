@@ -854,12 +854,23 @@ screen and (min-resolution: 2dppx) {
     pointer-events: none;
   }
 
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .backdrop.is-open {
     opacity: 1;
     visibility:visible;
     pointer-events: initial;
   }
-  .modal {
+.is-open {
+  transform: translateX(0);
+}
+
+
+.modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -914,7 +925,7 @@ screen and (min-resolution: 2dppx) {
     color: #2E2F42;
     margin-bottom: 16px;
   }
-  .form-div {
+.form-div {
     margin-bottom: 8px;
 }
 
@@ -1097,6 +1108,10 @@ screen and (min-resolution: 2dppx) {
   .mobile-menu-list {
     margin-bottom: auto;
   }
+  .mobile-menu-item {
+    color: currentColor;
+  }
+
   .mobile-menu-item:not(:last-child) {
     margin-bottom: 40px;
   }
